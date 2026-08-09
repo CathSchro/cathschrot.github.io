@@ -8,13 +8,13 @@ This project used public data to evaluated how profitable a movie would be based
 
 
 ### Project Paper
-[Download the project paper](/cathschrot.github.io/projects/project7/Movie Profitability Summary.docx)
+[Download the project paper](/cathschrot.github.io/projects/project7/Gas Tax Impact on Sales Paper.docx)
 <iframe src="/cathschrot.github.io/projects/project7/report7.pdf" width="100%" height="600px"></iframe>
 
 ### Project Presentation
-[Download the project presentation](/cathschrot.github.io/projects/project7/Movie Profitability Presentation.pptx)
+[Download the project presentation](/cathschrot.github.io/projects/project7/Gas Tax Impact on Sales Presentation.pptx)
 <iframe src="/cathschrot.github.io/projects/project7/presentation7.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project7/Movie Profitability Python Code.ipynb)
+[Download the project presentation](/cathschrot.github.io/projects/project7/DSC630SchrotbergerCaitieProjectPrinting.ipynb)
 <iframe src="/cathschrot.github.io/projects/project7/code7.pdf" width="100%" height="600px"></iframe>
