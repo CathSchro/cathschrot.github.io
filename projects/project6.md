@@ -12,5 +12,5 @@ This project used public data to explore data related to White House Visitors, h
 <iframe src="/cathschrot.github.io/projects/project6/paper6.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project code](/cathschrot.github.io/projects/project6/White House Visitor Code.ipynb)
+[Download the project code](/cathschrot.github.io/projects/project6/code6.pdf)
 <iframe src="/cathschrot.github.io/projects/project6/code6.pdf" width="100%"  height="600px"></iframe>
