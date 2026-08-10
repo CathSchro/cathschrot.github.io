@@ -4,7 +4,7 @@ title: Gas Tax Impact on Sales and Prices
 permalink: /projects/project7/
 ---
 
-This project used public data to evaluated how profitable a movie would be based on the studio producting it.
+This project use two models, linear regression and lasso, to determine that there is a relationship between the gas tax and the price/sales of gasoline.
 
 
 ### Project Paper
