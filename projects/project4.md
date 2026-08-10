@@ -4,7 +4,7 @@ title: Women's Volleball Players
 permalink: /projects/project4/
 ---
 
-This project used public data to evaluated how profitable a movie would be based on the studio producting it.
+To further expand my exploritory data analysis skills, this project required me to obtain data from three different types of data sources.  I used an csv file, a website, and an api.  The data from all three were merged together to create a complete view of the data on Women's volleyball players.  Visuals were then created to summarize the information.  
 
 
 ### Project Paper and Code
