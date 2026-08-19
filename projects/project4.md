@@ -8,5 +8,5 @@ To further expand my exploritory data analysis skills, this project required me 
 
 
 ### Project Paper and Code
-[Download the project paper and code](/cathschrot.github.io/projects/project4/Womens Volleyball Code.ipynb)
+[Download the project paper and code](/cathschrot.github.io/projects/project4/code4.pdf)
 <iframe src="/cathschrot.github.io/projects/project4/code4.pdf" width="100%" height="600px"></iframe>
