@@ -8,7 +8,7 @@ Using a data file of credit card transactions, a logistic regression model was c
 
 
 ### Project Paper
-[Download the project paper](/cathschrot.github.io/projects/reportt9.pdf)
+[Download the project paper](/cathschrot.github.io/projects/report9.pdf)
 <iframe src="/cathschrot.github.io/projects/project9/report9.pdf" width="100%" height="600px"></iframe>
 
 ### Project Presentation
