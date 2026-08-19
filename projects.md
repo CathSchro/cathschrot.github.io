@@ -20,3 +20,6 @@ Below are my current projects. Click any project to view its description and emb
 - [Recipe Generator](/cathschrot.github.io/projects/project8/)
 - [Credit Card Fraud](/cathschrot.github.io/projects/project9/)
 - [Housing Prices](/cathschrot.github.io/projects/project10/)
+
+### GitHub Site
+If you'd  like to visit the GitHub repo available [here.](https://github.com/CathSchro/cathschrot.github.io/tree/master/projects)
