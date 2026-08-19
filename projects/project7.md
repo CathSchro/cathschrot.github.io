@@ -12,9 +12,9 @@ This project use two models, linear regression and lasso, to determine that ther
 <iframe src="/cathschrot.github.io/projects/project7/report7.pdf" width="100%" height="600px"></iframe>
 
 ### Project Presentation
-[Download the project presentation](/cathschrot.github.io/projects/project7/Gas Tax Impact on Sales Presentation.pptx)
+[Download the project presentation](/cathschrot.github.io/projects/project7/presentation7.pdf)
 <iframe src="/cathschrot.github.io/projects/project7/presentation7.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project7/DSC630SchrotbergerCaitieProjectPrinting.ipynb)
+[Download the project code](/cathschrot.github.io/projects/project7/code7.pdf)
 <iframe src="/cathschrot.github.io/projects/project7/code7.pdf" width="100%" height="600px"></iframe>
