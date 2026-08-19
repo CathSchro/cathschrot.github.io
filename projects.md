@@ -19,4 +19,4 @@ Below are my current projects. Click any project to view its description and emb
 - [Gas Tax Impact on Sales and Prices](/cathschrot.github.io/projects/project7/)
 - [Recipe Generator](/cathschrot.github.io/projects/project8/)
 - [Credit Card Fraud](/cathschrot.github.io/projects/project9/)
-- [TBD](/cathschrot.github.io/projects/project10/)
+- [Housing Prices](/cathschrot.github.io/projects/project10/)
