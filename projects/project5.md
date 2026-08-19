@@ -12,5 +12,5 @@ This data mining project used public data to prepared data for model building.  
 <iframe src="/cathschrot.github.io/projects/project5/paper5.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project5/Increasing Graduation Rates Code.ipynb)
+[Download the project code](/cathschrot.github.io/projects/project5/code5.pdf)
 <iframe src="/cathschrot.github.io/projects/project5/code5.pdf" width="100%" height="600px"></iframe>
