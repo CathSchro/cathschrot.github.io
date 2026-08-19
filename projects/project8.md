@@ -14,5 +14,5 @@ Using machine learning, a model was built and fine tuned to create a site that f
 <iframe src="/cathschrot.github.io/projects/project8/CookingWithCaitieDemo.mp4" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project8/code8.pdf)
+[Download the project code](/cathschrot.github.io/projects/project8/code8.pdf)
 <iframe src="/cathschrot.github.io/projects/project8/code8.pdf" width="100%" height="600px"></iframe>
