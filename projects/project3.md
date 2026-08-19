@@ -16,5 +16,5 @@ This project used public data to evaluated how profitable a movie would be based
 <iframe src="/cathschrot.github.io/projects/project3/presentation3.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project3/Movie Profitability Python Code.ipynb)
+[Download the project code](/cathschrot.github.io/projects/project3/Movie Profitability Python Code.ipynb)
 <iframe src="/cathschrot.github.io/projects/project3/code3.pdf" width="100%" height="600px"></iframe>
