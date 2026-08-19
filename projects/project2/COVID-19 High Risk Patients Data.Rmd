@@ -1,0 +1,283 @@
+---
+title: "Final Project Step 2"
+author: "Caitie Schrotberger"
+date: "2024-05-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Introduction
+> Cornoavirus (C19) hit the world hard in the beginning of 2020.  This highly contagious virus started in China and quickly spread across the world.  As the disease progressed it mutated into many different variants making it much harder to treat.  It quickly became a public health emergency and classified as a pandemic.  Pandemics only hit the world about once every 100 years.  Cornavirus left the world struggling to react. It didn't know how to treat the disease, which demographics of people should be the most at risk.  
+
+> As Public Health professionals across the globe responded to this new virus, they had no prior information to go off of.  During the last pandemic, the world was in a much different technological and communicative level.  The Spanish Flu of 1918 occurred in a time with limited medical care, no method of fast communication across the world, and no technology which made it very difficult to track the true impact to the world, especially in death counts.  
+
+> Now that the pandemic is over, while the virus is still spreading and mutating, because of the way the world responded to the pandemic we now have much better information and data to be able to analyze how specific response methods impacted the spread of the disease and which deomgraphics (age, gender, race, ethnicity, location) were more succeptible to contracting it.  To be able to plan for and potentially have a more favorable outcome to the next pandemic, we can use data from this incident to create models that could be re-used during the next pandemic to react accordingly.  
+
+# Problem Statement
+> The problem that this research will address is how to identify high risk people during a pandemic.  
+
+> By not preparing a way to identify high risk populations during a pandemic, the United States opens itself up to high hospitalizations, stressing the capacity and staffing of facilities.  Additionally high death rates which would strain morgues and funeral homes would put additional stress on a population already under tension by losing loved ones.
+
+> Data and research from prior pandemics will allow creation of predictive regression models that can be used for emergency response.  Having models pre-built will allow for use and potential model re-training to make it more accurate.  This will allow response theams to implement control measures more quickly and effectively on high risk populations.
+
+## Research questions
+> Here are potential research questions that focus on the problem topic:
+
+- How fast did C19 spread in the USA?
+- Were there demographic groups that were more likely to contract C19?
+- How many people were hospitalized from C19 and what were the demographics of them?
+- Did certain populations have a higher propensity for death from C19?
+- Did the vaccine help control the spread of the disease?
+- Were certain demographic groups more likely to benefit from the vaccination?
+- Did the governmental mandates of large scale quarantines help slow the spread of C19?
+
+# Analysis
+
+## Approach
+> To be able to appropriately identify those at highest risk of contracting, being hospitalized, or dying from a future pandemic outbreak you need to model based on variables that will be available at any point in the future.  Using consistent demographic variables (such as age, gender, race, ethnicity, and geolocation) along with the values looking to be predicted (such as contract, hospitalized, and deceased) are factors that are currently standard health care metrics that can be easily obtained.
+
+> Separate models should be built for each health outcome independently and then together.  Testing the simple and multiple regression models against each other will help us understand how to better help people.  For example creating a model to predict those that might die from a virus out of the entire population gives you a small percentage of the targeted variable, but if you start with a data set based on those that were hospitalized, it may provide a greater model as the proportion of the targeted audience to the population is smaller.  
+
+## How your approach addresses the problem.
+>  The spread of viruses are hard to manage and can be unpredictable.  To be able to partially address the spread and impact to society of a new virus having multiple models created to reuse and modify during the identification and spread of a new pandemic will allow for faster public health response.
+
+> Data will be obtained from public data sources on the number of people that contracted C19, the number hospitalized, and the number deceased.  Demographics such as age, gender, race, ethnicity, and location will also be part of those data sets.  
+
+> The data will be analyzed via plots and graphs to look for trends and relationships between the variables.  From there a final data set with a predictor variable for hospitalization and death will be created.
+
+> Different models will be needed because not everyone that passes away makes it to a hospital.  So predictions could be for hospitalization, hospitalization and death, and just death.    
+
+## Data  (Minimum of 3 Datasets)
+- 1:  Census data by state and age and gender
+  - https://data.census.gov/table/DECENNIALDP2020.DP1?g=010XX00US$0400000_040XX00US31&d=DEC%20Demographic%20Profile
+
+  - This file is sourced by the US Census Bureau, the 2020 Decennial Census.  
+
+  - It provides by State, the population counts broken down by age (5 year buckets), gender, race, ethnicity, household type, and housing type. The counts and the percents (distributions) by category are provided.  
+
+- 2:  CDC COVID Hospitalizations by Jurisdiction
+  - https://data.cdc.gov/Public-Health-Surveillance/United-States-COVID-19-Hospitalization-Metrics-by-/39z2-9zu6/about_data
+
+  - This file is sourced by the Centers for Disease Control and Prevention (CDC).  It was sourced by information provided directly from hospitals across the US.  Data was collected from 8/1/2020 through 5/3/2024.
+
+  - It provides the date of data collection, HHS Region number, number of new C19 Hospital Admission, Cumulative C19 Hospital Admissions, Total Hospitalized C19 Patients, C19 Inpatient Bed Occupancy (7 day average), C19 ICU Bed Occupancy (7 day average).
+
+- 3:  COVID Cumulative Deaths by state and gender and age
+  - https://data.cdc.gov/NCHS/Provisional-COVID-19-Deaths-by-Sex-and-Age/9bhg-hcku/about_data
+
+  - This file is sourced by the Centers for Disease Control and Prevention (CDC).  It was sourced by information provide by the Nation Center for Health statistics.
+
+  - It provides data by month, year, and total of C19 Deaths, All Deaths, Pneumonia Daths, Pneumonia and C19 Death, Influenza Deaths, Pneumonia/Influenza/C19 Deaths broken down by gender and age.
+
+- 4:  COVID cumulative cases by week by state
+  - https://data.cdc.gov/Case-Surveillance/Weekly-United-States-COVID-19-Cases-and-Deaths-by-/pwn4-m3yp/about_data
+
+  - This file is sourced by the CDC.  It received information directly from the states on a daily basis from August 2020 through April 2024.
+
+  - It provides data by day and HHS region including 
+
+- 5:  COVID Case level by case, incl month, age, gender, hosp, death
+  - https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4/about_data
+
+  - This file is sourced by the CDC through information received by the states from January 2020 through May 2023
+
+  - It provides date received, state, range data represents (generally a week), total cases, new cases, total deaths, new deaths all related to C19.
+
+- 6:  Vaccination statuses by date and age
+  - https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh/about_data
+
+  - This file is sourced by the C19 Vaccine Administration process and includes data from clinics, pharmacies, long-term care facilities, dialysis centers, Federal Emergency Management Agency (FEMA), and other partner sites.  
+
+  - It provides data by State, county, and week for the percent of the population that had received 1 dose or a complete series of doses broken down by large age groups. It also has data on boosters and census population.
+
+> Overall these data sets provide the population demographics by state age and gender, then many different data sets on incidence (cases), hospitalization, death, and vaccination efforts. 
+
+##  Required Packages
+> The R packages needed for this project are as follows
+
+```{r}
+
+library(rmarkdown)
+library(readxl)
+library(openxlsx)
+library(readr)
+library(shiny)
+library(tinytex)
+library(knitr)
+library(latexpdf)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+
+```
+
+##	How to import and clean data
+> The steps to obtain and clean data are similar to a degree.  Data cleansing can vary based on the source, quality, and metrics is the data set.  To obtain, prepare, and clean the data the following steps will be used.  
+
+  - Obtain hyperlink to data or download to local directory
+  - Open and view the data in excel or notepad to view it to understand the data structure 
+  - Write R code to import the data file into a data frame
+  - Review each data source by looking at the first records (head)
+  - Remove duplicate rows
+  - Correct any spelling errors
+  - Remove or adjust any outliers
+  - Reorder columns or remove columns not needed
+  - Remove rows not needed (in cases where dataset provide more than population looking at)
+  - Adjust values to categorical rather than sequential as needed.  
+  - Ensure have nation wide totals
+
+##	What does the final data set look like?
+> Each dataset has been initially cleaned and the head function run which provides the first 6 rows of data.
+
+``` {r}
+#Data Set 1:  Census data by state and age and gender
+URL1 <- "DECENNIALDP2020DP1.xlsx"
+DS1 <- read.xlsx(URL1, sheet=2)
+DS1.1 <- select(DS1, -contains("X"))
+DS1.2 <- select(DS1.1, -contains("rico"))
+DS1.3 <- DS1.2[-c(1:2,22:27,47:52,72:88,92:175), ]
+DS1.4 <- DS1.3 %>% replace(is.na(.), 0)  
+DS1.5 <- DS1.4 %>% mutate_at(c(2:50), as.double)
+DS1.6 <- DS1.5 %>% mutate(Total = select(., Alabama:Wyoming) %>% rowSums(na.rm = TRUE))
+DS1.7 <- DS1.6 %>% relocate(Total, .before=Alabama)
+head(DS1.7)
+```
+
+
+``` {r}
+#Data Set 2:  CDC COVID Hospitalizations by Jurisdiction
+URL2 <- "US_COVID-19_Hospitalization_Metrics_by_Jurisdiction.csv"
+DS2 <- read.csv(URL2, header=T, stringsAsFactors=T)
+DS2.1 <- select(DS2, -contains("7.Day"))
+DS2.2 <- select(DS2.1, -contains("prior.week"))
+DS2.3 <- select(DS2.2, -contains("Rate"))
+DS2.4 <- select(DS2.3, -contains("Cumulative"))
+DS2.5 <- DS2.4 %>% group_by(Collection.Date) %>%  summarise(New.COVID.19.Hospital.Admissions = sum(New.COVID.19.Hospital.Admissions), Total.Hospitalized.COVID.19.Patients = sum(Total.Hospitalized.COVID.19.Patients))
+head(DS2.5)
+```
+
+
+``` {r}
+#Data Set 3:  COVID Cumulative Deaths by state and gender and age
+URL3 <-  "Provisional_COVID-19_Deaths_by_Sex_and_Age.csv"
+DS3 <- read.csv(URL3, header=T, stringsAsFactors=T)
+DS3.1 <- select(DS3, -contains("Pneumonia"))
+DS3.2 <- select(DS3.1, -contains("Influenza"))
+DS3.3 <- select(DS3.2, -contains("Footnote")) 
+DS3.4 <- DS3.3[-c(1:13771), ] #reduces to just data by month
+DS3.5 <- select(DS3.4, -contains("Date")) 
+DS3.6 <- select(DS3.5, -contains("Group",)) 
+DS3.7 <- select(DS3.6, -contains("Data")) 
+head(DS3.7)
+
+```
+
+
+``` {r}
+#Data Set 4:  COVID cumulative cases by week by state
+URL4 <-  "Weekly_US_COVID-19_Cases_and_Deaths_by_State.csv"
+DS4 <- read.csv(URL4, header=T, stringsAsFactors=T)
+DS4.1 <- select(DS4, -contains("tot"))
+DS4.2 <- select(DS4.1, -contains("historic"))
+head(DS4.2)
+```
+
+
+``` {r}  
+#Data Set 5:  COVID Case level by case, incl month, age, gender, hosp, death
+ULR5 <- "COVID-19_Case_Surveillance_Public_Use_Data_with_Geography.csv"
+DS5 <- read.csv(ULR5, header=T, stringsAsFactors=T)
+DS5.1 <- select(DS5, -contains("fips"))
+DS5.2 <- select(DS5.1, -contains("county"))
+DS5.3 <- select(DS5.2, -contains("interval"))
+DS5.4 <- select(DS5.3, -contains("process"))
+DS5.5 <- select(DS5.4, -contains("exposure"))
+DS5.6 <- select(DS5.5, -contains("symptom"))
+DS5_7 <- select(DS5.6, -contains("underlying"))
+DS5_7$RecCount <- 1
+head(DS5_7)  
+```
+
+
+``` {r}    
+#Data Set 6:  Vaccination statuses by date and age
+URL6 <- "COVID-19_Vaccinations_in_the_United_States_County.csv"
+DS6 <- read.csv(URL6, header=T)  
+DS6.1 <- select(DS6, -contains("fips"))
+DS6.2 <- select(DS6.1, -contains("county"))
+DS6.3 <- select(DS6.2, -contains("booster"))
+DS6.4 <- select(DS6.3, -contains("pct"))
+DS6.5 <- select(DS6.4, -contains("SVI"))
+DS6.6 <- select(DS6.5, -contains("census"))
+DS6.7 <- select(DS6.6, -contains("metro"))
+DS6.8 <- select(DS6.7, -contains("MMWR"))
+head(DS6.8)
+```
+
+#	What information is not self-evident?
+> The assumption is all data provided by the states and facilities that the federal entities have been complied is accurate.  If possible validation between individual state data reporting and the federal aggregation should be completed.  
+
+##	What are different ways you could look at this data?
+> There are so many ways to look at this data.  The first would be by geography - understanding which states had peaks of cases and when.  From there demographics would be analyzed - is there specific age, gender, or races that were more susceptible to contract C19.  From there those could both be repeated on individuals hospitalized and those who passed away from C19.  There are multiple ways the data could be matrixed by these splits to look for correlation.
+
+##	How do you plan to slice and dice the data?
+> First the data would need to be joined by like data elements to make modeling easier.  Summary variables such as totals and percent of incidence (like hospitalization rate and death rate) would be very beneficial to graph prior to modeling to look for trends in the data.  Also looking at the vaccination rates between one dose and completing the series would be interesting to see if that impacts the transmission, hospitalization, or death rates.  
+
+##	How could you summarize your data to answer key questions?
+> I found that it is best to review your full analysis with a peer to make sure that there is nothing missed and all logic makes sense.  Feedback from them can be very beneficial.  Then I would create a power point presentation to provide a summary of the data analyzed, then the key charts and model results.  While this process is very time consuming, the executives what to know the impact to them and their citizens so they can best act on it.  
+
+## Plots and Table Needs
+> The types of plots that will be key in illustrating findings are bar charts, line charts, scatter plots, stacked bar charts, along with regression lines, residual plots.  Correlation and covariant tables will be needed as well.  Plots and tables will be generated to look at relationships between the variables.  All graphs will be appropriately labeled with titles and legend, along with a text summary of what story the graphic is telling.
+
+```{r}
+DS5_Summ <-  DS5_7%>%group_by(age_group,sex, race, ethnicity, hosp_yn, death_yn)%>%
+  summarize(TotalCount = sum(RecCount))
+Hosp <- filter(DS5_Summ, hosp_yn == "Yes")
+Death <- filter(DS5_Summ, death_yn == "Yes")
+
+ggplot(Hosp, aes(fill=hosp_yn, y=TotalCount, x=age_group)) + geom_bar(position="stack", stat = "identity") + 
+  labs(x="Age Group", y="Number People",  title="COVID-19 Hospitalization by Age")
+
+ggplot(Death, aes(fill=death_yn, y=TotalCount, x=age_group)) + geom_bar(position="stack", stat = "identity") + 
+  labs(x="Age Group", y="Number People",  title="COVID-19 Deaths by Age")
+
+ggplot(DS5_Summ, aes(x=hosp_yn, y=death_yn, size = TotalCount, color = age_group)) +
+    geom_point(alpha=0.7) +
+    scale_size(range = c(.1, 24), name="Total Records (M)") + 
+  labs(x="Hospitalized", y="Deceased",  title="COVID-19 Hospitalizations & Deaths by Age")
+
+ggplot(Hosp, aes(x=hosp_yn, y=death_yn, size = TotalCount, color = age_group)) +
+    geom_point(alpha=0.7) +
+    scale_size(range = c(.1, 24), name="Total Records (M)") + 
+  labs(x="Hospitalized", y="Deceased",  title="COVID-19 Hospitalizations & Deaths by Age, Only Hospitalized") 
+
+```
+
+##	Do you plan on incorporating any machine learning techniques to answer your research questions? Explain.
+> Yes linear and logistic regression would be great tools to create a model that provides the coefficients for future pandemic response.  
+
+##	Questions for future steps.
+- How complete is the data the federal government obtained?
+- Are there variables that are to correlated that need to be evaluated?
+- Is there other data available that would enhance the analysis?
+- What is the easiest way to aggregate the data to the same date time frame?
+- Find the data sets that provide the most value as there is a lot of overlap between the currently identified sets.
+- Should the modeling should be done at the state level or country?
+
+## Analysis Insights
+> Those who contracted C19 who were 65 years and older had a higher concentration of hospitalizations and death.  Age plays a significant factor in determining the severity of the disease.  
+
+# Implications
+> With any medical crisis such as a pandemic, one has to be very careful when doing analaysis and creating models.  They much be as accurate as possible because any prediction can hit social media and blow up in a good or bad way.  If the model is not fit well it could cause panic and economic impacts through riots or rushes for health care assistance that is not available or needed.  
+
+> A model must be fine tuned, tested, and evaluated on multiple data sets to ensure accuracy, then communicated out appropriately so that facilities are ready to support anyone that needs medical care.
+
+# Limitations
+> The greatest limitation is the type of data available to create a model.  Having been part of the response efforts in Nebraska, I know that the CDC can choose how they want to report the data.  A lot of the data on testing was only on specific test types and excluded a large portion of rapid test done in medical offices or homes that would make the data more robust.
+
+> Doing a public records request from each state to specify the types of test, time frame and specific demographics needed would ensure the data is representative of the entire population and pulled in the same manner.  Asking for de-identified data would also help as the states would then be less at risk of a HIPAA incident.
+
+# Conclusion
+> The amount of C19 data available to create models and analyze is vast.  Finding the correct dataset that provides the elements needed along with an accurate representation of the population is the most critical.  From there, a data scientist could spend hours, days, and months evaluating relationships between the multiple variables. There is much to be learned from the concerted effort that all had in making sure data was a part of communication in the pandemic response.   
