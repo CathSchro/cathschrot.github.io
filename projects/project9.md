@@ -16,5 +16,5 @@ Using a data file of credit card transactions, a logistic regression model was c
 <iframe src="/cathschrot.github.io/projects/project9/presentation9.pdf" width="100%" height="600px"></iframe>
 
 ### Project Code
-[Download the project presentation](/cathschrot.github.io/projects/project9/SchrotbergerDSC680_Project1.ipynb)
+[Download the project presentation](/cathschrot.github.io/projects/project9/code9.pdf)
 <iframe src="/cathschrot.github.io/projects/project9/code9.pdf" width="100%" height="600px"></iframe>
