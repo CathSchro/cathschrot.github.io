@@ -53,6 +53,7 @@ DSC 670 Advanced Uses of Generative AI
 	Think of something that would be done more efficiently and effectively with generative AI.  Identify the type of generative AI you’re going to use in the solution.  Provide at least five prompt experiments to see if your problem has the potential to be solved using the model you chose.  Fine-tune the model. Create the model.  Track your model build process and document the metrics.  Use Streamlit to create an application that uses your solution.
 
 ## Credit Card Fraud Logistic Regression
+## Housing Prices
 
 DSC 680 Applied Data Science
 	You have been a data scientist since the day you began this program. You may not have recognized it, but it’s been there the whole time. In this course, you’re not only going to recognize it, but also show us what you can do.  You will be selecting data, performing analyses and presentations of data that is useful to you, and follow the end to end data science process, which would include modeling.
